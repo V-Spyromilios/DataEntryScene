@@ -56,15 +56,23 @@
 		EF4767EA295E0DA9002CA3C6 /* DataEntryScene */ = {
 			isa = PBXGroup;
 			children = (
-				EF4767EB295E0DA9002CA3C6 /* AppDelegate.swift */,
-				EF4767ED295E0DA9002CA3C6 /* SceneDelegate.swift */,
-				EF4767EF295E0DA9002CA3C6 /* ViewController.swift */,
+				EF4767FF295E0DD7002CA3C6 /* SecondaryFiles */,
 				EF4767F1295E0DA9002CA3C6 /* Main.storyboard */,
-				EF4767F4295E0DAB002CA3C6 /* Assets.xcassets */,
-				EF4767F6295E0DAB002CA3C6 /* LaunchScreen.storyboard */,
 				EF4767F9295E0DAB002CA3C6 /* Info.plist */,
 			);
 			path = DataEntryScene;
+			sourceTree = "<group>";
+		};
+		EF4767FF295E0DD7002CA3C6 /* SecondaryFiles */ = {
+			isa = PBXGroup;
+			children = (
+				EF4767EB295E0DA9002CA3C6 /* AppDelegate.swift */,
+				EF4767ED295E0DA9002CA3C6 /* SceneDelegate.swift */,
+				EF4767EF295E0DA9002CA3C6 /* ViewController.swift */,
+				EF4767F4295E0DAB002CA3C6 /* Assets.xcassets */,
+				EF4767F6295E0DAB002CA3C6 /* LaunchScreen.storyboard */,
+			);
+			path = SecondaryFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
