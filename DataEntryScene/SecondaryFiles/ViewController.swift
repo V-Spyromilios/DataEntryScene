@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextViewDelegate {
 	@IBOutlet var titleView: UITextView!
 	@IBOutlet var descriptionView: UITextView!
 	@IBOutlet var cgiImage: UIImageView!
@@ -21,14 +21,17 @@ class ViewController: UIViewController {
 		setImageView()
 	}
 	
-	
+	func textViewDidChange(_ textView: UITextView) {
+		func textViewWithPlaceholderDidChange(_ textView: UITextView, label: UILabel) {
+				label.isHidden = !textView.text.isEmpty
+			}
+	}
 	
 	func setTitleView() {
 		titleView.textContainer.maximumNumberOfLines = 1
 		titleView.isScrollEnabled = false
 		titleView.textContainer.lineBreakMode = .byTruncatingTail
 		setPlaceholder(withText: "Title...", label: titleLable, view: titleView)
-		
 	}
 	
 	func setDescriptionView() {
@@ -36,7 +39,6 @@ class ViewController: UIViewController {
 		descriptionView.isScrollEnabled = false
 		descriptionView.textContainer.lineBreakMode = .byTruncatingTail
 		setPlaceholder(withText: "Description...", label: descriptionLabel, view: descriptionView)
-		
 	}
 	
 	func setImageView() {
