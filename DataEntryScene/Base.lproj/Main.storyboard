@@ -22,16 +22,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9OO-is-Mw7" userLabel="DescriptionView">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQx-rf-GUL" userLabel="TitleLabel">
+                                <rect key="frame" x="12" y="115" width="369" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9OO-is-Mw7" userLabel="DescriptionView">
                                 <rect key="frame" x="12" y="160" width="369" height="33"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                             </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cgi_logo" translatesAutoresizingMaskIntoConstraints="NO" id="qYo-vt-zOO">
-                                <rect key="frame" x="12" y="211" width="369" height="130"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="cgi_logo" translatesAutoresizingMaskIntoConstraints="NO" id="qYo-vt-zOO">
+                                <rect key="frame" x="12" y="241" width="369" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="130" id="KQn-dM-oeN"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="KQn-dM-oeN"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLn-aM-sde">
@@ -65,7 +71,7 @@
                                                         </constraints>
                                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                         <color key="textColor" systemColor="labelColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                 </subviews>
@@ -96,13 +102,23 @@
                                     <constraint firstAttribute="trailing" secondItem="U95-KR-2Dr" secondAttribute="trailing" id="tZq-bw-GFO"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAe-sW-M3Y">
+                                <rect key="frame" x="12" y="160" width="369" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="qYo-vt-zOO" firstAttribute="width" secondItem="9OO-is-Mw7" secondAttribute="width" id="40s-1e-Nxq"/>
                             <constraint firstItem="JXW-1z-446" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="7jh-8j-We9"/>
+                            <constraint firstItem="gQx-rf-GUL" firstAttribute="trailing" secondItem="JXW-1z-446" secondAttribute="trailing" id="81m-WO-klY"/>
+                            <constraint firstItem="gQx-rf-GUL" firstAttribute="centerY" secondItem="JXW-1z-446" secondAttribute="centerY" id="9AB-Yy-gWX"/>
                             <constraint firstItem="1oP-Tl-E87" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="EFF-Rr-VE3"/>
+                            <constraint firstItem="gQx-rf-GUL" firstAttribute="leading" secondItem="JXW-1z-446" secondAttribute="leading" id="EnS-90-tnr"/>
+                            <constraint firstItem="gQx-rf-GUL" firstAttribute="bottom" secondItem="JXW-1z-446" secondAttribute="bottom" id="FKt-dl-DVr"/>
                             <constraint firstItem="9OO-is-Mw7" firstAttribute="leading" secondItem="JXW-1z-446" secondAttribute="leading" id="Lmq-Qn-E5l"/>
                             <constraint firstItem="1oP-Tl-E87" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TMJ-dW-33M"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JXW-1z-446" secondAttribute="trailing" constant="12" id="TMX-a9-twy"/>
@@ -112,8 +128,12 @@
                             <constraint firstItem="9OO-is-Mw7" firstAttribute="top" secondItem="JXW-1z-446" secondAttribute="bottom" constant="12" id="bZ6-fp-bJM"/>
                             <constraint firstItem="qYo-vt-zOO" firstAttribute="centerX" secondItem="9OO-is-Mw7" secondAttribute="centerX" id="cmp-mk-yuK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1oP-Tl-E87" secondAttribute="trailing" constant="12" id="dDF-GF-cY7"/>
-                            <constraint firstItem="qYo-vt-zOO" firstAttribute="top" secondItem="9OO-is-Mw7" secondAttribute="bottom" constant="18" id="fme-2A-hdP"/>
+                            <constraint firstItem="cAe-sW-M3Y" firstAttribute="trailing" secondItem="9OO-is-Mw7" secondAttribute="trailing" id="ezv-3R-BNa"/>
+                            <constraint firstItem="qYo-vt-zOO" firstAttribute="top" relation="greaterThanOrEqual" secondItem="9OO-is-Mw7" secondAttribute="bottom" constant="18" id="fme-2A-hdP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HLn-aM-sde" secondAttribute="trailing" constant="12" id="hrA-nU-OhK"/>
+                            <constraint firstItem="cAe-sW-M3Y" firstAttribute="leading" secondItem="9OO-is-Mw7" secondAttribute="leading" id="o7N-hf-2h7"/>
+                            <constraint firstItem="cAe-sW-M3Y" firstAttribute="bottom" secondItem="9OO-is-Mw7" secondAttribute="bottom" id="oR0-eg-n1c"/>
+                            <constraint firstItem="cAe-sW-M3Y" firstAttribute="centerY" secondItem="9OO-is-Mw7" secondAttribute="centerY" id="pVQ-Ls-Yfg"/>
                             <constraint firstItem="JXW-1z-446" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="uS7-qe-T0X"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1oP-Tl-E87" secondAttribute="bottom" constant="48" id="vaL-q7-BvI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HLn-aM-sde" secondAttribute="bottom" constant="12" id="yvE-9G-oUK"/>
@@ -123,7 +143,9 @@
                     <navigationItem key="navigationItem" id="lEq-3K-DIZ"/>
                     <connections>
                         <outlet property="cgiImage" destination="qYo-vt-zOO" id="LP1-9H-AKP"/>
+                        <outlet property="descriptionLabel" destination="cAe-sW-M3Y" id="EAa-mb-MKJ"/>
                         <outlet property="descriptionView" destination="9OO-is-Mw7" id="obQ-h3-vRn"/>
+                        <outlet property="titleLable" destination="gQx-rf-GUL" id="wcD-TR-VjD"/>
                         <outlet property="titleView" destination="JXW-1z-446" id="6sG-Zm-kcz"/>
                     </connections>
                 </viewController>
