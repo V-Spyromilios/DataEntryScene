@@ -12,6 +12,9 @@ class ViewController: UIViewController, UITextViewDelegate {
 	@IBOutlet var descriptionView: UITextView!
 	@IBOutlet var cgiImage: UIImageView!
 
+	@IBAction func onSubmit(_ sender: Any) {
+		cgiImage.isHidden = !cgiImage.isHidden
+	}
 	@IBOutlet weak var titleLable: UILabel!
 
 	@IBOutlet weak var descriptionLabel: UILabel!
@@ -20,10 +23,13 @@ class ViewController: UIViewController, UITextViewDelegate {
 		setDescriptionView()
 		setImageView()
 	}
+//	titleView.delegate = self
+//	delegate?.textViewDidChange(titleView)
 	
 	func textViewDidChange(_ textView: UITextView) {
 		func textViewWithPlaceholderDidChange(_ textView: UITextView, label: UILabel) {
 				label.isHidden = !textView.text.isEmpty
+			// textView.shouldChangeText(in: , replacementText: )
 			}
 	}
 	
@@ -44,7 +50,7 @@ class ViewController: UIViewController, UITextViewDelegate {
 	func setImageView() {
 		cgiImage.isUserInteractionEnabled 	= false
 		cgiImage.layer.borderColor 	= CGColor(red: 0, green: 0, blue: 0, alpha: 0.8)
-		cgiImage.layer.borderWidth 	= 2.0
+		cgiImage.layer.borderWidth 	= 1.0
 	}
 	
 	func setPlaceholder(withText: String, label: UILabel, view: UITextView) {
