@@ -162,7 +162,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Xh-pn-VXa">
-                                <rect key="frame" x="20" y="223" width="353" height="21"/>
+                                <rect key="frame" x="0.0" y="223" width="393" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="i9b-KQ-nxw"/>
                                 </constraints>
@@ -180,10 +180,9 @@
                         <viewLayoutGuide key="safeArea" id="bEJ-Fw-bJk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="9Xh-pn-VXa" firstAttribute="centerX" secondItem="bEJ-Fw-bJk" secondAttribute="centerX" id="Fmx-fF-nzm"/>
-                            <constraint firstItem="9Xh-pn-VXa" firstAttribute="leading" secondItem="bEJ-Fw-bJk" secondAttribute="leading" constant="20" id="csp-Oq-Kkr"/>
+                            <constraint firstItem="9Xh-pn-VXa" firstAttribute="leading" secondItem="bEJ-Fw-bJk" secondAttribute="leading" id="csp-Oq-Kkr"/>
                             <constraint firstItem="9Xh-pn-VXa" firstAttribute="top" secondItem="bEJ-Fw-bJk" secondAttribute="top" constant="120" id="wnh-Nh-Eqf"/>
-                            <constraint firstItem="bEJ-Fw-bJk" firstAttribute="trailing" secondItem="9Xh-pn-VXa" secondAttribute="trailing" constant="20" id="xsi-Fd-tVP"/>
+                            <constraint firstItem="bEJ-Fw-bJk" firstAttribute="trailing" secondItem="9Xh-pn-VXa" secondAttribute="trailing" id="xsi-Fd-tVP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Phd-9o-jCK"/>
@@ -200,6 +199,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="t8m-uw-BD8">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" systemColor="linkColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -215,6 +215,9 @@
         <image name="cgi_logo" width="2560" height="1200"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
