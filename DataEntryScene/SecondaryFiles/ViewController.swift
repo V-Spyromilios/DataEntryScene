@@ -7,32 +7,29 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextViewDelegate {
+
+class ViewController: UIViewController {
 	@IBOutlet var titleView: UITextView!
 	@IBOutlet var descriptionView: UITextView!
 	@IBOutlet var cgiImage: UIImageView!
+	@IBOutlet weak var titleLable: UILabel!
+	@IBOutlet weak var descriptionLabel: UILabel!
 
 	@IBAction func onSubmit(_ sender: Any) {
 		cgiImage.isHidden = !cgiImage.isHidden
 	}
-	@IBOutlet weak var titleLable: UILabel!
 
-	@IBOutlet weak var descriptionLabel: UILabel!
 	override func viewDidLoad() {
+		titleView.delegate = self // use the 'overwritten' funcs and not the basics in delegate!
+		descriptionView.delegate = self
+		titleView.tag = 1
+		descriptionView.tag = 2
+
 		setTitleView()
 		setDescriptionView()
 		setImageView()
 	}
-//	titleView.delegate = self
-//	delegate?.textViewDidChange(titleView)
-	
-	func textViewDidChange(_ textView: UITextView) {
-		func textViewWithPlaceholderDidChange(_ textView: UITextView, label: UILabel) {
-				label.isHidden = !textView.text.isEmpty
-			// textView.shouldChangeText(in: , replacementText: )
-			}
-	}
-	
+
 	func setTitleView() {
 		titleView.textContainer.maximumNumberOfLines = 1
 		titleView.isScrollEnabled = false
@@ -58,89 +55,51 @@ class ViewController: UIViewController, UITextViewDelegate {
 		label.font = UIFont.boldSystemFont(ofSize: 13.0)
 		label.sizeToFit()
 		label.textColor = .white
-		label.isHidden = !view.text.isEmpty
+		label.isHidden = false
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-//	func addPlaceholder() {
-//		var placeholder = UILabel()
-//		placeholder.text = "Add Description..."
-//		placeholder.font = UIFont.init(name: "Lato-Regular", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 13.0)
-//		placeholder.sizeToFit()
-//		descriptionView.addSubview(placeholder)
-//		placeholder.frame.origin = CGPoint(x: 5, y: (descriptionView.font?.pointSize)! / 2)
-//		placeholder.textColor = UIColor.white
-//		placeholder.isHidden = !descriptionView.text.isEmpty
-//	}
-
-	
-//	func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-//		// get the current text, or use an empty string if that failed
-//		let currentText = textView.text ?? ""
-//
-//		// attempt to read the range they are trying to change, or exit if we can't
-//		guard let stringRange = Range(range, in: currentText) else { return false }
-//
-//		// add their new text to the existing text
-//		let updatedText = currentText.replacingCharacters(in: stringRange, with: text)
-//
-//		// poplast() ?
-//		// make sure the result is under 16 characters
-//		if (textView.contentSize.height / textView.font!.lineHeight) > 3 {
-//			return true
-//		}
-//		return false
-//	}
-
 }
 
-//func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-//	// get the current text, or use an empty string if that failed
-//	let currentText = textView.text ?? ""
+extension ViewController: UITextViewDelegate {
+	func textViewDidBeginEditing(_ textView: UITextView) {	// when tapped
+		print("TextViewStarted Editing")
+		if textView.tag == 1 {
+			titleLable.isHidden = true
+		}
+		else {
+			descriptionLabel.isHidden = true
+		}
+		
+//		if titleLable.isHidden == true {
+		//titleLable.isHidden = !titleView.text.isEmpty
+//		}
 //
-//	// attempt to read the range they are trying to change, or exit if we can't
-//	guard let stringRange = Range(range, in: currentText) else { return false }
-//
-//	// add their new text to the existing text
-//	let updatedText = currentText.replacingCharacters(in: stringRange, with: text)
-//
-//	// make sure the result is under 16 characters
-//	return (textView.contentSize.height / textView.font!.lineHeight) > CGFloat(3)
-//}
+//		if descriptionLabel.isHidden == true {
+//			descriptionLabel.isHidden = !descriptionView.text.isEmpty
+//		}
+		
+	}
+	
+	func textViewDidEndEditing(_ textView: UITextView) {
+		print("DidEnd Editing")
+		if textView.tag == 1 {
+			titleLable.isHidden = !titleView.text.isEmpty
+		}
+		else {
+			descriptionLabel.isHidden = !descriptionView.text.isEmpty
+		}
+	}
+}
 
 
-//extension UITextView {
-//	func checkMaxNumberOfLines(view: UITextView, maxLines: Int) {
-//		if (view.contentSize.height / view.font!.lineHeight) > CGFloat(maxLines) {
-//			view.text.popLast()
+	
+	
+	
+
+//	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//			if titleView.text?.isEmpty != nil {
+//				titleLable.isHidden = !titleView.text.isEmpty
+//			}
+//		super.touchesBegan(touches, with: event)
 //		}
 //	}
-//
-//	func checkMaxNumberOfLines2(maxLines: Int) {
-//		if (self.contentSize.height / self.font!.lineHeight) > CGFloat(maxLines) {
-//			self.text.popLast()
-//		}
-//	}
-//}
 
-
-//extension UITextViewDelegate {
-//	optional func textViewDidChange(_ textView: UITextView) {
-//		placeholder.isHidden = !textView.text.isEmpty
-//	}
-//}
